@@ -1,1 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280" role="img" aria-label="Ali Hussnain — plasma chemistry, nanomaterials, software">
+  <title>Ali Hussnain — plasma chemistry, nanomaterials, software</title>
 
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#100E1C"/>
+      <stop offset="0.55" stop-color="#090B10"/>
+      <stop offset="1" stop-color="#0C0912"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="0.46" cy="0.24" r="0.75">
+      <stop offset="0" stop-color="#8B7BF0" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#8B7BF0" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="emberHalo" cx="0.80" cy="0.24" r="0.5">
+      <stop offset="0" stop-color="#FF6B5B" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#FF6B5B" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="card">
+      <rect x="0" y="0" width="1000" height="280" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .ln { transform-origin: center bottom; }
+
+    @keyframes f1 { 0%,100% { opacity: .62 } 43% { opacity: 1 } }
+    @keyframes f2 { 0%,100% { opacity: 1 } 37% { opacity: .55 } 71% { opacity: .88 } }
+    @keyframes f3 { 0%,100% { opacity: .74 } 29% { opacity: 1 } 63% { opacity: .6 } }
+    @keyframes hot { 0%,100% { opacity: .8 } 22% { opacity: 1 } 55% { opacity: .68 } 80% { opacity: 1 } }
+    @keyframes breathe { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
+
+    .f1 { animation: f1 2.9s ease-in-out infinite; }
+    .f2 { animation: f2 3.7s ease-in-out infinite; }
+    .f3 { animation: f3 4.3s ease-in-out infinite; }
+    .hot { animation: hot 2.2s ease-in-out infinite; }
+    .halo { animation: breathe 6.5s ease-in-out infinite; }
+
+    .d0 { animation-delay: 0s }    .d1 { animation-delay: -.7s }
+    .d2 { animation-delay: -1.4s } .d3 { animation-delay: -2.1s }
+    .d4 { animation-delay: -2.8s } .d5 { animation-delay: -3.5s }
+
+    .sans { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .f1, .f2, .f3, .hot, .halo { animation: none; opacity: .9 }
+    }
+  </style>
+
+  <g clip-path="url(#card)">
+    <rect width="1000" height="280" fill="url(#ground)"/>
+    <rect class="halo" width="1000" height="280" fill="url(#halo)"/>
+    <rect width="1000" height="280" fill="url(#emberHalo)"/>
+
+    <!-- ── emission spectrum: Ar discharge in contact with water/EG ── -->
+    <g filter="url(#glow)">
+      <!-- Ar I / Ar II violet–blue cluster, 415.9 – 514.5 nm -->
+      <rect class="ln f2 d0" x="90.3" y="74" width="1.6" height="26" fill="#8B7BF0"/>
+      <rect class="ln f1 d3" x="98.5" y="70" width="1.8" height="30" fill="#8B7BF0"/>
+      <rect class="ln f3 d1" x="109.9" y="78" width="1.4" height="22" fill="#8B7BF0"/>
+      <rect class="ln f2 d4" x="112.4" y="80" width="1.4" height="20" fill="#8B7BF0"/>
+      <rect class="ln f1 d2" x="117.9" y="72" width="1.7" height="28" fill="#8B7BF0"/>
+      <rect class="ln f3 d5" x="124.5" y="76" width="1.5" height="24" fill="#8B7BF0"/>
+      <rect class="ln f2 d1" x="165.8" y="82" width="1.3" height="18" fill="#8B7BF0"/>
+      <rect class="ln f1 d4" x="172.4" y="78" width="1.5" height="22" fill="#8B7BF0"/>
+      <rect class="ln f3 d0" x="187.9" y="84" width="1.2" height="16" fill="#8B7BF0"/>
+      <rect class="ln f2 d3" x="201.4" y="80" width="1.4" height="20" fill="#8B7BF0"/>
+      <rect class="ln f1 d5" x="208.8" y="82" width="1.3" height="18" fill="#8B7BF0"/>
+
+      <!-- Hβ 486.1 nm — the liquid -->
+      <rect class="ln hot d2" x="227.6" y="62" width="2.0" height="38" fill="#FF4D6D"/>
+
+      <rect class="ln f3 d2" x="231.3" y="68" width="1.7" height="32" fill="#8B7BF0"/>
+      <rect class="ln f1 d0" x="247.9" y="76" width="1.5" height="24" fill="#8B7BF0"/>
+      <rect class="ln f2 d5" x="258.1" y="80" width="1.4" height="20" fill="#8B7BF0"/>
+      <rect class="ln f3 d3" x="283.1" y="74" width="1.6" height="26" fill="#8B7BF0"/>
+
+      <!-- Hα 656.3 nm — the brightest thing here, and the reason it's here -->
+      <rect class="ln hot d0" x="560.2" y="34" width="2.6" height="66" fill="#FF4D6D"/>
+
+      <!-- Ar I red / NIR cluster, 696.5 – 840.8 nm -->
+      <rect class="ln f1 d1" x="639.0" y="66" width="1.7" height="34" fill="#FF6B5B"/>
+      <rect class="ln f2 d4" x="658.9" y="60" width="1.9" height="40" fill="#FF6B5B"/>
+      <rect class="ln f3 d0" x="699.2" y="72" width="1.5" height="28" fill="#FF6B5B"/>
+      <rect class="ln f1 d3" x="720.9" y="68" width="1.6" height="32" fill="#FF6B5B"/>
+      <rect class="ln f2 d0" x="744.4" y="42" width="2.3" height="58" fill="#FF6B5B"/>
+      <rect class="ln f3 d4" x="770.0" y="54" width="2.0" height="46" fill="#FF6B5B"/>
+      <rect class="ln f1 d2" x="787.4" y="62" width="1.8" height="38" fill="#FF6B5B"/>
+
+      <!-- O I 777.4 nm — reactive oxygen at the plasma–liquid interface -->
+      <rect class="ln hot d3" x="797.2" y="56" width="2.1" height="44" fill="#FFB347"/>
+
+      <rect class="ln f2 d2" x="831.2" y="70" width="1.5" height="30" fill="#FF6B5B"/>
+      <rect class="ln f3 d5" x="844.3" y="58" width="1.9" height="42" fill="#FF6B5B"/>
+      <rect class="ln f1 d4" x="863.9" y="38" width="2.4" height="62" fill="#FF6B5B"/>
+      <rect class="ln f2 d1" x="893.2" y="74" width="1.4" height="26" fill="#FF6B5B"/>
+      <rect class="ln f3 d2" x="921.1" y="70" width="1.5" height="30" fill="#FF6B5B"/>
+
+      <!-- O I 844.6 nm -->
+      <rect class="ln hot d5" x="928.7" y="66" width="1.8" height="34" fill="#FFB347"/>
+    </g>
+
+    <!-- detector baseline -->
+    <rect x="60" y="100" width="880" height="0.75" fill="#7A8290" opacity="0.24"/>
+
+    <!-- species annotations -->
+    <text class="mono" x="561.5" y="27" fill="#FF4D6D" font-size="8.5" opacity="0.85" text-anchor="middle" letter-spacing="0.6">Hα</text>
+    <text class="mono" x="798.2" y="48" fill="#FFB347" font-size="8.5" opacity="0.8" text-anchor="middle" letter-spacing="0.6">O I</text>
+
+    <!-- wavelength ruler -->
+    <g class="mono" fill="#7A8290" font-size="8" opacity="0.42" text-anchor="middle" letter-spacing="0.8">
+      <text x="99" y="115">420</text>
+      <text x="232" y="115">488</text>
+      <text x="561" y="115">656</text>
+      <text x="745" y="115">750</text>
+      <text x="865" y="115">811</text>
+      <text x="940" y="115" text-anchor="end" opacity="0.75">nm</text>
+    </g>
+
+    <!-- ── identity ── -->
+    <rect x="60" y="150" width="2.5" height="11" fill="#8B7BF0"/>
+    <text class="mono" x="72" y="159" fill="#7A8290" font-size="9" letter-spacing="2.6">UNIVERSITY OF IDAHO · CHEMICAL ENGINEERING</text>
+    <text class="mono" x="940" y="159" fill="#8B7BF0" font-size="9" letter-spacing="2.6" text-anchor="end" opacity="0.9">Ar · 200 W · 12 ms</text>
+
+    <text class="sans" x="60" y="204" fill="#E8EAF0" font-size="44" font-weight="250" letter-spacing="10.5">ALI HUSSNAIN</text>
+
+    <text class="mono" x="62" y="234" fill="#7A8290" font-size="10.5" letter-spacing="2.4">PLASMA CHEMISTRY — NANOMATERIALS — SOFTWARE</text>
+
+    <rect x="0" y="0" width="1000" height="280" rx="14" fill="none" stroke="#8B7BF0" stroke-opacity="0.14" stroke-width="1"/>
+  </g>
+</svg>
