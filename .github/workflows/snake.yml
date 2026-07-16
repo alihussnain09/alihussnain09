@@ -1,1 +1,41 @@
+# .github/workflows/snake.yml
+# Regenerates the contribution snake in the argon palette and pushes it
+# to the `output` branch, so the README stays current without cluttering main.
 
+name: contribution snake
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # daily, 04:00 UTC
+  workflow_dispatch:       # lets you run it by hand from the Actions tab
+  push:
+    branches: [main]
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Generate snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?color_snake=#C9A227&color_dots=#0A1428,#3D3416,#6B5A1E,#9A8221,#C9A227
+            dist/snake-light.svg?color_snake=#8A6F1B&color_dots=#EBEDF0,#EFE2B8,#DEC97A,#C9A227,#8A6F1B
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
